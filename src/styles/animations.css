@@ -1,0 +1,33 @@
+.flying-card {
+  box-shadow:
+    0 12px 20px #b68ea550,
+    0 25px 45px #92718a30 !important;
+  will-change: transform, opacity;
+}
+
+.flying-card:hover {
+  transform: none;
+}
+
+.player-hand .uno-card {
+  cursor: pointer;
+}
+
+.unplayable-card .uno-card {
+  cursor: default;
+}
+
+.discard-pile .uno-card {
+  cursor: default;
+}
+
+.draw-pile .uno-card {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flying-card {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,309 @@
+.bot-active .player-name {
+  border-radius: 30px;
+  background: #f4e9ff;
+  box-shadow:
+    0 0 0 3px #c9b6f180,
+    0 0 22px #c9b6f180;
+  animation: activePlayerGlow 1.8s ease-in-out infinite;
+}
+
+.bot-active .bot-hand {
+  filter: drop-shadow(0 0 10px #c9b6f180);
+}
+
+@keyframes activePlayerGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 0 3px #c9b6f160,
+      0 0 12px #c9b6f160;
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 5px #c9b6f190,
+      0 0 28px #c9b6f1aa;
+  }
+}
+
+.turn-label-active {
+  background: #f3e9ff;
+  color: #8c6caf;
+  border-color: #c9b6f1;
+  animation: turnLabelPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes turnLabelPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px #c9b6f140;
+  }
+
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 22px #c9b6f190;
+  }
+}
+
+.player-area-active .player-info {
+  filter: drop-shadow(0 0 8px #c9b6f190);
+}
+
+.bot-uno-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border: 1px solid #e6bad4;
+  border-radius: 30px;
+  background: #fff1f8;
+  color: #a56d93;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px #c99dbd30;
+  animation: unoBadgeBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes unoBadgeBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.uno-announcement {
+  position: fixed;
+  top: 24%;
+  left: 50%;
+  z-index: 1500;
+  width: max-content;
+  max-width: 90vw;
+  pointer-events: none;
+  animation: announcementAppear 1.7s ease both;
+}
+
+.uno-announcement-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 18px 34px;
+  border: 2px solid #c9b6f1;
+  border-radius: 50px;
+  background: #fff8fdf2;
+  box-shadow:
+    0 12px 35px #9e7da050,
+    0 0 30px #e9d8ff80;
+  color: #9b72b8;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(28px, 5vw, 45px);
+  white-space: nowrap;
+}
+
+.announcement-sparkle {
+  color: #e4a8c9;
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+@keyframes announcementAppear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 30px) scale(0.65);
+  }
+
+  18% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1.1);
+  }
+
+  28%, 75% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -35px) scale(0.9);
+  }
+}
+
+.celebration-overlay {
+  overflow: hidden;
+  background: #f5eaf4b8;
+  backdrop-filter: blur(9px);
+}
+
+.celebration-modal {
+  position: relative;
+  z-index: 2;
+  width: min(460px, 92vw);
+  padding: 38px 30px;
+  border: 2px solid #e5c6df;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top, #f6e8ff, transparent 65%),
+    #fffafd;
+  box-shadow:
+    0 20px 65px #a57f9a40,
+    inset 0 0 0 7px #ffffff90;
+  text-align: center;
+  animation: celebrationEnter 0.65s ease both;
+}
+
+@keyframes celebrationEnter {
+  from {
+    opacity: 0;
+    transform: translateY(45px) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.celebration-crown {
+  display: grid;
+  place-items: center;
+  width: 95px;
+  height: 95px;
+  margin: 0 auto 15px;
+  border: 2px solid #d7bce8;
+  border-radius: 50%;
+  background: #f2e5ff;
+  color: #b58bce;
+  font-size: 65px;
+  box-shadow: 0 0 35px #d9b8f280;
+  animation: crownFloat 2s ease-in-out infinite;
+}
+
+@keyframes crownFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+.celebration-eyebrow {
+  color: #b68bad;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.celebration-modal h2 {
+  margin: 12px 0;
+  color: #9f78b2;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(40px, 7vw, 62px);
+  font-weight: 400;
+}
+
+.celebration-modal p {
+  max-width: 300px;
+  margin: 0 auto 18px;
+  color: #a58a9f;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.celebration-stars {
+  margin-bottom: 24px;
+  color: #d9a5c8;
+  font-size: 25px;
+  letter-spacing: 9px;
+}
+
+.heart-confetti {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.falling-heart {
+  position: absolute;
+  top: -60px;
+  color: #d7b8e8;
+  text-shadow: 0 3px 8px #ffffffaa;
+  animation: fallingHeart linear infinite;
+}
+
+.falling-heart:nth-child(3n) {
+  color: #f5b9d7;
+}
+
+.falling-heart:nth-child(4n) {
+  color: #b6d9fa;
+}
+
+@keyframes fallingHeart {
+  0% {
+    transform: translateY(-60px) rotate(0deg);
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .uno-announcement {
+    top: 18%;
+  }
+
+  .uno-announcement-inner {
+    gap: 8px;
+    padding: 12px 20px;
+  }
+
+  .celebration-modal {
+    padding: 28px 18px;
+  }
+
+  .celebration-crown {
+    width: 75px;
+    height: 75px;
+    font-size: 50px;
+  }
+
+  .celebration-stars {
+    letter-spacing: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bot-active .player-name,
+  .turn-label-active,
+  .bot-uno-badge,
+  .uno-announcement,
+  .celebration-modal,
+  .celebration-crown,
+  .falling-heart {
+    animation: none;
+  }
+
+  .uno-announcement {
+    transform: translateX(-50%);
+  }
+
+  .falling-heart {
+    display: none;
+  }
+}

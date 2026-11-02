@@ -1,0 +1,269 @@
+.menu-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  overflow: hidden;
+  padding: 35px 18px;
+  background:
+    radial-gradient(circle at 15% 15%, #f7dcebbb, transparent 35%),
+    radial-gradient(circle at 85% 80%, #e5dcffbb, transparent 40%),
+    #fff9fc;
+}
+
+.menu-panel {
+  position: relative;
+  z-index: 2;
+  width: min(620px, 100%);
+  padding: 50px 35px 35px;
+  border: 2px solid #e8cbdc;
+  border-radius: 35px;
+  background: #fffafdde;
+  box-shadow:
+    0 20px 80px #b48da522,
+    inset 0 0 0 8px #ffffff88;
+  text-align: center;
+  animation: menuAppear 0.7s ease both;
+}
+
+@keyframes menuAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #b18da4;
+}
+
+.menu-card-display {
+  position: relative;
+  width: 310px;
+  height: 240px;
+  margin: 35px auto 10px;
+}
+
+.menu-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: bottom center;
+  pointer-events: none;
+}
+
+.menu-card .uno-card {
+  width: 140px;
+  height: 215px;
+  pointer-events: none;
+}
+
+.menu-card-left {
+  transform: translateX(-90%) rotate(-22deg);
+}
+
+.menu-card-middle {
+  z-index: 3;
+  transform: translateX(-50%) translateY(-12px);
+}
+
+.menu-card-right {
+  transform: translateX(-10%) rotate(22deg);
+}
+
+.menu-card .uno-card:hover {
+  transform: none;
+}
+
+.menu-title {
+  margin: 10px 0 5px;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(54px, 8vw, 82px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #a77d96;
+}
+
+.menu-subtitle {
+  margin: 0 auto 30px;
+  color: #aa90a2;
+  font-size: 13px;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-buttons button {
+  width: min(280px, 100%);
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.menu-buttons button:hover {
+  transform: translateY(-3px);
+}
+
+.menu-play-button {
+  border: 1px solid #bca2e6;
+  background: #dcd0fa;
+  color: #80669c;
+  box-shadow: 0 5px 0 #c5b1e7;
+}
+
+.menu-play-button:hover {
+  background: #d2c1f5;
+}
+
+.menu-secondary-button {
+  border: 1px solid #e6c6d9;
+  background: #fff5fa;
+  color: #a47d96;
+}
+
+.menu-secondary-button:hover {
+  background: #f9e5f0;
+}
+
+.menu-sound {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 25px;
+  color: #a48b9b;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.menu-sound input {
+  width: 16px;
+  height: 16px;
+  accent-color: #b69cdd;
+}
+
+.menu-divider {
+  margin: 20px auto 12px;
+  color: #d5b1c9;
+  font-size: 22px;
+}
+
+.menu-footer {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #bda4b4;
+}
+
+.menu-sparkle {
+  position: absolute;
+  color: #e0bad2;
+  pointer-events: none;
+  animation: floatSparkle 5s ease-in-out infinite;
+}
+
+.menu-sparkle-one {
+  top: 10%;
+  left: 15%;
+  font-size: 75px;
+}
+
+.menu-sparkle-two {
+  top: 25%;
+  right: 12%;
+  font-size: 95px;
+  color: #d8c8f2;
+  animation-delay: 1s;
+}
+
+.menu-sparkle-three {
+  bottom: 15%;
+  left: 12%;
+  font-size: 65px;
+  color: #bdddf8;
+  animation-delay: 2s;
+}
+
+.menu-sparkle-four {
+  bottom: 10%;
+  right: 15%;
+  font-size: 80px;
+  animation-delay: 1.5s;
+}
+
+@keyframes floatSparkle {
+  0%, 100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translateY(-18px) rotate(8deg);
+  }
+}
+
+.menu-return-button {
+  display: block;
+  margin: 12px auto 0;
+  background: #f8e6f0;
+  color: #a47d96;
+}
+
+@media (max-width: 550px) {
+  .menu-panel {
+    padding: 35px 20px 28px;
+    border-radius: 25px;
+  }
+
+  .menu-card-display {
+    width: 240px;
+    height: 190px;
+    margin-top: 30px;
+  }
+
+  .menu-card .uno-card {
+    width: 105px;
+    height: 165px;
+  }
+
+  .menu-card .card-symbol {
+    font-size: 70px;
+  }
+
+  .menu-card .card-oval {
+    inset: 20px 8px;
+    border-width: 5px;
+  }
+
+  .menu-title {
+    font-size: 55px;
+  }
+
+  .menu-sparkle {
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-panel,
+  .menu-sparkle {
+    animation: none;
+  }
+}
